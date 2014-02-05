@@ -7,4 +7,14 @@ Spree::Country.class_eval do
 		end
 		return middle_states.uniq
 	end
+
+	def middle_states_obj
+		middle_states = {}
+		self.states.each do |state|
+			next if state.middle_state.nil? or state.middle_state == ''
+			middle_states[state.middle_state] = [] unless middle_states.has_key?(state.middle_state)
+			middle_states[state.middle_state] << state.name
+		end
+		return middle_states
+	end
 end

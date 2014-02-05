@@ -2,6 +2,7 @@ Deface::Override.new(:virtual_path => 'spree/admin/states/_form',
   :name => 'add_middle_states_to_states_edit',
   :insert_bottom => "div.omega",
   :text => "
+  <% if @country.has_middle_states %>
     <%= f.field_container :middle_state_select do %>
       <%= f.label :middle_state, Spree.t(:middle_state) %>
       <br>
@@ -17,6 +18,7 @@ Deface::Override.new(:virtual_path => 'spree/admin/states/_form',
       <br>
       <%= check_box_tag :new_middle_state %>
     <% end %>
+  <% end %>
   ")
 
 Deface::Override.new(:virtual_path => 'spree/admin/states/_form',
