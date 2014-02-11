@@ -12,8 +12,8 @@ Spree::Country.class_eval do
 		middle_states = {}
 		self.states.each do |state|
 			next if state.middle_state.nil? or state.middle_state == ''
-			middle_states[state.middle_state] = [] unless middle_states.has_key?(state.middle_state)
-			middle_states[state.middle_state] << state.name
+			middle_states[state.middle_state] = { :states => []} unless middle_states.has_key?(state.middle_state)
+			middle_states[state.middle_state][:states] << {:name => state.name, :id => state.id }
 		end
 		return middle_states
 	end
