@@ -69,7 +69,7 @@ Spree.ready(function($){
         mstatePara.show();
         mstateSelect = mstatePara.find('select');
 
-        selected = parseInt(mstateSelect.val());
+        selected = mstatePara.data('mstate');
         mstateSelect.html('');
         $.each(middle_states, function(index, value)
         {
