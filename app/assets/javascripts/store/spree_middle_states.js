@@ -73,7 +73,6 @@ Spree.ready(function($){
         mstateSelect.html('');
         $.each(middle_states, function(index, value)
         {
-          console.log(index);
           opt = $(document.createElement('option')).attr('value', index).html(index);
           if(selected == index)
             {
@@ -90,6 +89,9 @@ Spree.ready(function($){
         Spree.fillStates(data, region);
       }
   }
+
+  Spree.updateMiddlesStates('b');
+  Spree.updateMiddlesStates('s');
 
 });
 

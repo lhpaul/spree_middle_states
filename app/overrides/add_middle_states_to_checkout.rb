@@ -6,7 +6,7 @@ Deface::Override.new(:virtual_path => 'spree/address/_form',
     <p class=\"field\" id=<%=\"\#{address_id}middle_state\"%> style=\"display: <%= address.country.has_middle_states ? \"block\" : \"none\" %>\">
       <% have_middle_states = !address.country.middle_states.empty? %>
       <%= form.label :middle_state, Spree.t(:middle_state) %><span class='required' id=<%=\"\#{address_id}middle_state-required\"%>>*</span><br/>
-      <%= select_tag \"\#{address_id}middle_state\", address.country.middle_states, :include_blank => false %>
+      <%= select_tag \"\#{address_id}middle_state\", options_for_select(address.country.middle_states), :include_blank => true %>
     </p>
   <% end %>
   ")
