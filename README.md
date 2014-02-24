@@ -9,7 +9,7 @@ Installation
 Add spree_middle_states to your Gemfile:
 
 ```ruby
-gem 'spree_middle_states'
+gem 'spree_middle_states', :git => 'https://github.com/lhpaul/spree_middle_states'
 ```
 
 Bundle your dependencies and run the installation generator:
