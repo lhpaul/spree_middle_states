@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_middle_states'
-  s.version     = '2-0-stable'
+  s.version     = '1.0'
   s.summary     = 'Gem for spree thats adds middle states for the checkout addreses'
   s.description = 'Gem for spree thats adds middle states for the checkout addreses'
   s.required_ruby_version = '>= 1.9.3'
